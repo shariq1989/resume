@@ -1,0 +1,152 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \bfseries {Shariq M. Jamil}}\\
+	Colorado Springs, CO $\cdot$ shariq1989@gmail.com $\cdot$ (858) 395-2720\\
+	Linkedin: /in/rickjamil/
+\end{center}
+
+%==== Education ====%
+\header{Education}
+\textbf{Harvard University Extension School}\hfill Cambridge, MA\\
+MA Information Management Systems \textrm{GPA: 3.88} \hfill 2015 - May 2021\\
+\vspace{2mm}
+\textbf{Northern Arizona University}\hfill Flagstaff, AZ\\
+BS Computer Science \textrm{GPA: 3.47} \hfill 2013 - 2015\\
+\vspace{2mm}
+
+%==== Experience ====%
+\header{Work Experience}
+\vspace{1mm}
+
+\textbf{FedEx | Senior Systems Engineer} \hfill Colorado Springs, CO\\
+\textsl{Android, Bash, Docker, Git, Gradle, Groovy, Jenkins, Nexus, uDeploy} \hfill Mar 2020 - Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item 	Advocating for, creating and mantaining end-to-end automated Continuous Integration pipelines that build across multiple platforms including \textbf{Android}, \textbf{C} and \textbf{Java}
+	\item  Implementing dynamic monitoring and alerting using \textbf{AppDynamics} and \textbf{Splunk} 
+	\item  Mentoring development teams to extend and maintain their automation pipelines
+\end{itemize}
+\textbf{FedEx | Software Engineer II} \hfill Colorado Springs, CO\\
+\textsl{Angular, Oracle, Python} \hfill Jun 2017 - Mar 2020\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item  Developed an application using \textbf{Angular} and \textbf{Python} which is used to manage the sort and routing rules for packages flowing through FedEx Express global network 
+	\item  The application is concurrently used by hundreds of engineers and is able to process large amounts of data quickly which is used by downstream scanning applications
+\end{itemize}
+\textbf{FedEx | Software Engineer I} \hfill Colorado Springs, CO\\
+\textsl{Ajax, ICEFaces, Java, JMS, Maven, Oracle, Spring, Weblogic} \hfill Jun 2015 - Jun 2017\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item  Developed and maintained distrubuted applications that support automated capacity management and quoting for FedEx Freight 
+	\item These \textbf{Java Spring} applications allowed for mainframe retirement and the automation of call-center based workflows
+\end{itemize}
+\textbf{Mother Road Brewery | Intern (College Capstone Project)} \hfill Flagstaff, AZ\\
+\textsl{Angular.js, Express, Git, Heroku, JSON, MongoDB, Node.js} \hfill Sep 2014 - May 2015\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item  Developed API’s to routinely pull 
+	\begin{itemize} \itemsep 1pt
+		\item Financial data from Quickbooks, Square and Vermont Information Processing applications 
+		\item Temperature data from sensors placed in the brewery
+	\end{itemize}
+	\item  Developed a web-based dashboard for forecasting and monitoring sales and brewing equipment temperature
+\end{itemize}
+\textbf{FedEx | Programmer Analyst Intern} \hfill Colorado Springs, CO\\
+\textsl{Bash, Java, JSON, SQL} \hfill Summer 2014\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item  Collected server (\textbf{Linux}), application (\textbf{TIBCO Business Objects/Events}, \textbf{Informatica}, \textbf{WebLogic}) and database (\textbf{Oracle}) health data
+	\item  Wrote \textbf{Bash} scripts to format and pipe collected data to a visualization client based on API specifications
+	\item  Visualized data on a web-based dashboard, providing analysts visibility into system performance
+\end{itemize}
+
+
+
+\header{Projects}
+\textbf{Seatime} \hfill
+\textsl{Vue.js, Django, PostgreSQL, Heroku} \hfill Jan 2020 - Present\\
+\vspace{2mm}
+Currently developing a web application to “gamify” career progression for merchant mariners. The application will 
+\begin{itemize} \itemsep 1pt
+	\item  Utilize user-submitted sailing logs to display progress towards the next credential 
+	\item  Simplify US Coast Guard requirements for progressing through ranks 
+	\item Autofill forms using user-submitted data
+\end{itemize}
+\vspace*{2mm}
+
+
+
+\ 
+\end{document}
